@@ -50,20 +50,25 @@ class _MyHomePageState extends State<MyHomePage> {
     messaging.subscribeToTopic("messaging");
 
     messaging.getToken().then((value) {
-      print(value);
+      print("FCM Token: $value");
     });
 
     FirebaseMessaging.onMessage.listen((RemoteMessage event) {
       print("message received");
-      print(event.notification!.body);
-      print(event.data.values);
+      print("Body: ${event.notification?.body}");
+      print("Data: ${event.data}");
 
       if (!mounted) return;
+
       showDialog(
         context: context,
         builder: (BuildContext context) {
           return AlertDialog(
-            title: Text("Notification"),
+            title: Text(
+              event.data['type'] == 'important'
+                  ? '🚨 Important Notification'
+                  : '🔔 Notification',
+            ),
             content: Text(event.notification!.body!),
             actions: [
               TextButton(
