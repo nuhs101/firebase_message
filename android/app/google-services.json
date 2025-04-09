@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "667915199060",
+    "project_id": "fir-message-b2d39",
+    "storage_bucket": "fir-message-b2d39.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667915199060:android:d5af7b369dced6b59ec3c1",
+        "android_client_info": {
+          "package_name": "com.example.firebase_message"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB08uN43I2Mss2fp7S2E_uTyoj-QKOsPuU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
