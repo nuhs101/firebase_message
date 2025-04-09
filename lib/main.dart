@@ -69,7 +69,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   ? '🚨 Important Notification'
                   : '🔔 Notification',
             ),
-            content: Text(event.notification!.body!),
+            content: Text(event.notification?.body ?? "No message body"),
+            backgroundColor:
+                event.data['type'] == 'important'
+                    ? Colors.red.shade100
+                    : Colors.blue.shade100,
             actions: [
               TextButton(
                 child: Text("Ok"),
